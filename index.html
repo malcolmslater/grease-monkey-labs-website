@@ -103,7 +103,9 @@
         <div class="service-grid">
           <article class="service-card featured">
             <span class="service-number">01</span>
-            <div class="service-icon" aria-hidden="true">⌁</div>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M5 8h22M5 16h22M5 24h22"/><circle cx="11" cy="8" r="2.5"/><circle cx="21" cy="16" r="2.5"/><circle cx="14" cy="24" r="2.5"/></svg>
+            </div>
             <h3>Data analysis &amp; cleaning</h3>
             <p>Profile, reconcile and reshape difficult datasets so that teams can trust what they are seeing and build on solid foundations.</p>
             <ul>
@@ -116,7 +118,9 @@
 
           <article class="service-card">
             <span class="service-number">02</span>
-            <div class="service-icon" aria-hidden="true">⤳</div>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><circle cx="7" cy="7" r="3"/><circle cx="25" cy="10" r="3"/><circle cx="11" cy="25" r="3"/><circle cx="25" cy="24" r="3"/><path d="M10 8l12 2M8.5 10l2 12M14 24h8M23 13l1 8"/></svg>
+            </div>
             <h3>Data lineage &amp; tooling</h3>
             <p>Trace where data comes from, how it changes, what consumes it and what is at risk when something moves.</p>
             <ul>
@@ -129,7 +133,9 @@
 
           <article class="service-card">
             <span class="service-number">03</span>
-            <div class="service-icon" aria-hidden="true">⌬</div>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><rect x="5" y="5" width="9" height="9"/><rect x="18" y="5" width="9" height="9"/><rect x="5" y="18" width="9" height="9"/><rect x="18" y="18" width="9" height="9"/><path d="M14 9.5h4M9.5 14v4M22.5 14v4M14 22.5h4"/></svg>
+            </div>
             <h3>Whole-system assessment</h3>
             <p>Look across architecture, code, data, integrations and operations to find structural risk—not just the loudest symptom.</p>
             <ul>
@@ -142,7 +148,9 @@
 
           <article class="service-card featured-dark">
             <span class="service-number">04</span>
-            <div class="service-icon" aria-hidden="true">↗</div>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M7 25L25 7M13 7h12v12"/></svg>
+            </div>
             <h3>Modernisation &amp; cloud</h3>
             <p>Turn the assessment into a credible route forward, balancing ambition with cost, risk and the realities of the existing system.</p>
             <ul>
@@ -270,7 +278,7 @@
     <section class="section about" id="about">
       <div class="shell about-grid">
         <div class="brand-panel">
-          <img src="assets/gml-logo.png" alt="Grease Monkey Labs monkey holding a spanner">
+          <img src="assets/gml-logo-clean.png" alt="Grease Monkey Labs monkey holding a spanner">
         </div>
         <div class="about-copy">
           <p class="section-kicker">Who you work with</p>
@@ -294,7 +302,14 @@
         </div>
         <div class="contact-action">
           <p>Send me the awkward question, the unreliable dataset or the system nobody wants to touch.</p>
-          <a href="mailto:hello@greasemonkeylabs.co.uk">hello@greasemonkeylabs.co.uk <span aria-hidden="true">↗</span></a>
+          <div class="contact-email">
+            <a class="email-link" href="mailto:hello@greasemonkeylabs.co.uk">
+              <span>hello@greasemonkeylabs.co.uk</span>
+              <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 25L25 7M13 7h12v12"/></svg>
+            </a>
+            <button class="copy-email" type="button" data-email="hello@greasemonkeylabs.co.uk">Copy email</button>
+            <span class="copy-status" role="status" aria-live="polite"></span>
+          </div>
         </div>
       </div>
     </section>

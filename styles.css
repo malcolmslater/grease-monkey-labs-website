@@ -125,7 +125,8 @@ button, input, textarea { font: inherit; }
 .service-card.featured { background: var(--orange); color: white; }
 .service-card.featured-dark { background: var(--ink); color: var(--cream); }
 .service-number { position: absolute; top: 24px; right: 26px; font-family: var(--mono); font-size: .72rem; opacity: .55; }
-.service-icon { display: grid; place-items: center; width: 58px; height: 58px; margin-bottom: 58px; border: 1px solid currentColor; font-family: var(--mono); font-size: 1.65rem; }
+.service-icon { display: grid; place-items: center; width: 58px; height: 58px; margin-bottom: 58px; border: 1px solid currentColor; }
+.service-icon svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .service-card h3 { max-width: 430px; margin: 0 0 15px; font-family: var(--display); font-size: 2.3rem; line-height: 1; text-transform: uppercase; }
 .service-card p { max-width: 580px; margin: 0 0 26px; opacity: .78; }
 .service-card ul { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; margin: 0; padding: 22px 0 0; border-top: 1px solid currentColor; list-style: none; }
@@ -183,7 +184,7 @@ button, input, textarea { font: inherit; }
 
 .about-grid { display: grid; grid-template-columns: .78fr 1.22fr; gap: 90px; align-items: center; }
 .brand-panel { min-height: 520px; display: grid; place-items: center; padding: 42px; background: #fff; border: 1px solid var(--line); overflow: hidden; }
-.brand-panel img { width: min(100%, 540px); mix-blend-mode: multiply; }
+.brand-panel img { width: min(88%, 540px); }
 .about-copy .lead { margin: 30px 0 16px; font-size: 1.25rem; font-weight: 600; }
 .about-copy > p:not(.section-kicker) { max-width: 680px; color: var(--muted); }
 .about-notes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 32px; }
@@ -194,11 +195,18 @@ button, input, textarea { font: inherit; }
 .contact .section-kicker { color: white; opacity: .75; }
 .contact h2 { font-size: clamp(3.5rem, 7vw, 6.5rem); }
 .contact-action p { max-width: 520px; margin: 0 0 24px; font-size: 1.08rem; }
-.contact-action a { display: inline-flex; gap: 20px; align-items: center; padding-bottom: 8px; border-bottom: 2px solid white; text-decoration: none; font-family: var(--display); font-size: clamp(1.35rem, 2.5vw, 2.2rem); font-weight: 700; text-transform: uppercase; }
+.contact-email { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; align-items: start; }
+.contact-action .email-link { min-width: 0; display: inline-flex; gap: 18px; align-items: center; padding-bottom: 8px; border-bottom: 2px solid white; text-decoration: none; font-family: var(--display); font-size: clamp(1.25rem, 2vw, 1.85rem); font-weight: 700; text-transform: uppercase; }
+.email-link span { min-width: 0; overflow-wrap: anywhere; }
+.email-link svg { flex: 0 0 30px; width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.copy-email { min-height: 44px; justify-self: start; padding: 10px 14px; border: 1px solid white; background: transparent; color: white; cursor: pointer; font-family: var(--mono); font-size: .68rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; }
+.copy-email:hover, .copy-email:focus-visible { background: white; color: var(--orange); }
+.copy-status { grid-column: 1 / -1; min-height: 1.2em; color: rgba(255,255,255,.78); font-family: var(--mono); font-size: .65rem; text-transform: uppercase; }
 
 .site-footer { padding: 34px 0; background: var(--ink); color: var(--cream); }
-.footer-inner { display: grid; grid-template-columns: auto 1fr auto; gap: 30px; align-items: center; }
-.footer-inner p { margin: 0; color: #8f8a80; text-align: center; font-size: .76rem; }
+.footer-inner { display: grid; grid-template-columns: minmax(215px, auto) minmax(0, 1fr) auto; gap: 30px; align-items: center; }
+.footer-inner > * { min-width: 0; }
+.footer-inner p { max-width: 800px; margin: 0; color: #8f8a80; justify-self: center; text-align: center; overflow-wrap: anywhere; font-size: .76rem; }
 .footer-inner > a:last-child { color: #aaa49a; font-size: .82rem; }
 
 @media (max-width: 960px) {
@@ -237,6 +245,8 @@ button, input, textarea { font: inherit; }
   .service-card { min-height: auto; padding: 28px; }
   .service-icon { margin-bottom: 42px; }
   .contact-inner { align-items: start; }
+  .contact-email { grid-template-columns: 1fr; align-items: start; }
+  .copy-email { justify-self: start; }
 }
 
 @media (max-width: 480px) {
